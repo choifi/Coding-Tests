@@ -1,2 +1,9 @@
-# Coding-Tests
-자료구조, 알고리즘 공부 repository 
+# 🧠 Algorithm & Coding Test Practice
+
+Python-based data structures and algorithms problem solving.
+
+## Section 1. Algorithm Practice
+### HashMap
+
+## Section 2. Coding Test Practice
+### Dynamic Programming
