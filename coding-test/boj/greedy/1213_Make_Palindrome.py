@@ -20,7 +20,7 @@ Greedy - 그때 그때 선택을 하기 때문이다. 즉시 확정
 
 import sys
 N = list(map(str, sys.stdin.readline().strip())) # strip()을 하지 않으면 /n이 들어감
-
+N.sort() # 기존의 리스트를 수정하여 정렬된 결과를 반환
 dict_N = {} # 각 문자열의 개수 count 
 for i in N:
     if i not in dict_N.keys():
