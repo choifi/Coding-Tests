@@ -35,7 +35,8 @@ isResult =  True
 for key, value in dict_N.items(): # leftover가 1 초과일 경우는 문자열 출력
     leftover += value % 2
     if leftover > 1:
-        isResult = False
+        print("I'm Sorry Hansoo")
+        sys.exit()
     if value % 2 == 0:
         half_result += key * (value//2)
     if value % 2 == 1:
@@ -44,10 +45,7 @@ for key, value in dict_N.items(): # leftover가 1 초과일 경우는 문자열 
 
 result = half_result + solo + half_result[::-1]
 
-if isResult == False:
-    print("I'm Sorry Hansoo")
-else:
-    print(result)
+print(result)
 
 
 
