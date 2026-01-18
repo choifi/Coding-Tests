@@ -18,9 +18,12 @@ Greedy - 그때 그때 선택을 하기 때문이다. 즉시 확정
 - 정답이 여러개 일때는 사전적으로 앞서는 것을 출력한다.
 '''
 
+
 import sys
 N = list(map(str, sys.stdin.readline().strip())) # strip()을 하지 않으면 /n이 들어감
-N.sort() # 기존의 리스트를 수정하여 정렬된 결과를 반환
+# N.sort() # 기존의 리스트를 수정하여 정렬된 결과를 반환
+# 이 부분이 조금 걸립니다. 
+
 dict_N = {} # 각 문자열의 개수 count 
 for i in N:
     if i not in dict_N.keys():
@@ -32,15 +35,15 @@ leftover = 0
 half_result = ''
 solo = ''
 isResult =  True
-for key, value in dict_N.items(): # leftover가 1 초과일 경우는 문자열 출력
-    leftover += value % 2
+for key in sorted(dict_N.keys()): # leftover가 1 초과일 경우는 문자열 출력
+    leftover += dict_N[key] % 2
     if leftover > 1:
         print("I'm Sorry Hansoo")
         sys.exit()
-    if value % 2 == 0:
-        half_result += key * (value//2)
-    if value % 2 == 1:
-        half_result += key * (value//2)
+    if dict_N[key] % 2 == 0:
+        half_result += key * (dict_N[key] // 2)
+    if dict_N[key]  % 2 == 1:
+        half_result += key * (dict_N[key] // 2)
         solo = key
 
 result = half_result + solo + half_result[::-1]
