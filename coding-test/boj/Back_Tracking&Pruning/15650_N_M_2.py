@@ -31,4 +31,5 @@ def dfs(depth, start): # depth는 지금까지 뽑은 개수
         # 되돌리기 - backtracking
         path.pop()
 
+# DFS 시작
 dfs(0,1)
