@@ -13,3 +13,4 @@ Python-based data structures and algorithms problem solving.
 * Dynamic Programming
 * brute-force
 * Greedy
+* BackTracking & Pruning
